@@ -9,3 +9,25 @@ setup(
     install_requires=requirements,
     packages=find_packages()
 )
+
+from distutils.core import setup
+setup(
+  name = 'swagger_ui',
+  packages = find_packages(),
+  version = '0.1',
+  license='GPL-3.0',
+  description = 'An extension to flask_restplus that can convert back-end objects into APIs',
+  author = 'Alireza Davoudi',
+  author_email = 'davoudialireza@gmail.com',
+  url = 'https://github.com/Faraadid/swagger_ui',
+  download_url = '',
+  keywords = ['flask_restplus', 'swagger', 'swagger ui'],
+  install_requires=requirements,
+  classifiers=[
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: GPL-3.0 License',
+    'Programming Language :: Python :: 3',
+  ],
+)
