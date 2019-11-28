@@ -20,7 +20,7 @@ setup(
   author = 'Alireza Davoudi',
   author_email = 'davoudialireza@gmail.com',
   url = 'https://github.com/Faraadid/swagger_ui',
-  download_url = '',
+  download_url = 'https://github.com/Faraadid/swagger_ui/archive/v0.1.tar.gz',
   keywords = ['flask_restplus', 'swagger', 'swagger ui'],
   install_requires=requirements,
   classifiers=[
