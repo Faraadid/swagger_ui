@@ -56,10 +56,7 @@ class RestfulApi(flask_restplus.Api):
             def invoke_callable(parser, *args, **kwargs):
                 for key, value in parser.parse_args().items():
                     kwargs[key] = value
-                try:
-                    return callable(*args, **kwargs)
-                except BaseException as e:
-                    abort(500, str(e))
+                return callable(*args, **kwargs)
 
             if is_post:
                 if is_get:
