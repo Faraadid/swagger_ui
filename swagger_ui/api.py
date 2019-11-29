@@ -102,11 +102,14 @@ class RestfulApi(flask_restplus.Api):
                 if isinstance(param_type, listof):
                     param_type = param_type.subtype
                     param_action = 'append'
-                if issubclass(param_type, file):
-                    is_get = False
-                    is_post = True
-                    param_type = FileStorage
-                    param_location = { 'get': 'files', 'post': 'files' }
+                try:
+                    if issubclass(param_type, file):
+                        is_get = False
+                        is_post = True
+                        param_type = FileStorage
+                        param_location = { 'get': 'files', 'post': 'files' }
+                except:
+                    pass
                 if isinstance(param_type, enum):
                     param_choices = tuple(param_type.entries.keys())
                     param_type = str
@@ -140,3 +143,4 @@ class RestfulApi(flask_restplus.Api):
 
         backend.member_resources = member_resources
         backend.url_for = MethodType(backend_url_for, backend)
+
