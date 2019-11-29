@@ -145,4 +145,3 @@ class RestfulApi(flask_restplus.Api):
 
         backend.member_resources = member_resources
         backend.url_for = MethodType(backend_url_for, backend)
-
