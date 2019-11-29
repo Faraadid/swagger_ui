@@ -119,7 +119,8 @@ class RestfulApi(flask_restplus.Api):
                     type=param_type,
                     action=param_action,
                     choices=param_choices,
-                    required=isempty(p.default)
+                    required=isempty(p.default),
+                    default=None if isempty(p.default) else p.default
                 )
                 get_parser.add_argument(
                     p.name,
@@ -127,7 +128,8 @@ class RestfulApi(flask_restplus.Api):
                     type=param_type,
                     action=param_action,
                     choices=param_choices,
-                    required=isempty(p.default)
+                    required=isempty(p.default),
+                    default=None if isempty(p.default) else p.default
                 )
 
             resource = build_resource(value, post_parser, get_parser, is_post, is_get)
