@@ -5,7 +5,7 @@ backend objects into APIs
 """
 
 import inspect
-import flask_restplus
+import flask_restx as flask_restplus
 
 from flask import abort
 from werkzeug.datastructures import FileStorage
