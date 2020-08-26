@@ -1,4 +1,4 @@
-flask_restplus
+flask-restx
 flask
 flask_cors
 werkzeug
